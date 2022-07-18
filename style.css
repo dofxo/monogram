@@ -1,0 +1,408 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400&display=swap');
+
+/* general */
+* {
+    margin: 0;
+    font-family: 'Prompt', sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1150px;
+
+}
+
+/* navBar */
+#navBar {
+    position: fixed;
+    top: 10px;
+    z-index: 1;
+    display: flex;
+    width: 98%;
+    justify-content: space-between;
+    align-items: center;
+    height: fit-content;
+    padding: 8px 0;
+    background-color: #1a2456;
+    margin: 10px 10px;
+}
+
+#navBar>div {
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+}
+
+#navBar #navBarLeft svg {
+    fill: #efc2b3;
+}
+
+#navBar #navBarRight ul {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#navBar #navBarRight>ul>li {
+    position: relative;
+}
+
+#navBar #navBarRight>ul>li>a,
+#navBar svg {
+    cursor: pointer;
+    font-size: 12px;
+    text-decoration: none;
+    color: #efc2b3;
+    fill: #efc2b3;
+    margin: 0 15px;
+    word-spacing: 3px;
+
+}
+
+
+#navBar #navBarRight>ul>li>a:hover {
+    color: #ff8b68;
+}
+
+#navBar #navBarRight #dropDown {
+    position: relative;
+}
+
+#navBar #navBarRight>ul #dropDown>a:hover {
+
+    color: #f0efed;
+}
+
+#navBar #navBarRight>ul #dropDown::after {
+    position: absolute;
+    content: '';
+    left: 90%;
+    top: 35%;
+    width: 4px;
+    height: 4px;
+    border-bottom: 2px solid #efc2b3;
+    border-right: 2px solid #efc2b3;
+    transform: rotate(45deg);
+}
+
+
+#navBar #navBarRight>ul>li>ul {
+    position: absolute;
+    top: 130%;
+    left: 0;
+    background-color: #f0efed;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 220px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid gray;
+    display: none;
+}
+
+
+#navBar #navBarRight>ul>li>ul>li {
+    padding: 8px 0 5px 10px;
+}
+
+#navBar #navBarRight>ul>li>ul>li>a {
+    text-decoration: none;
+    color: #080b1b;
+}
+
+#navBar #navBarRight>ul>#dropDown:hover::after {
+    border-color: #f0efed;
+}
+
+#title #navBar #navBarLeft svg:hover {
+    fill: #ff8b68;
+}
+
+/* navBar END */
+/* title */
+#title {
+    position: relative;
+    background: url(image/shop-cta-xl.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 650px;
+    display: flex;
+    align-items: center;
+}
+
+#title .container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#title #textBox {
+    margin: 70px 70px 0 0;
+}
+
+#title #textBox h1 {
+    color: #1a2456;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#title #textBox p {
+    color: #1a2456;
+    font-size: 16px;
+
+}
+
+
+/* title END */
+/* stock / stock 2  */
+.stock {
+    margin-top: 50px;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.part-2 {
+    margin-bottom: 20px;
+}
+
+.stock .stockItem {
+    cursor: pointer;
+    width: 48%;
+    height: fit-content;
+    margin: 0 10px 55px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.part-2 .stockItem {
+    width: 30%;
+    height: fit-content;
+    margin-bottom: 15px;
+}
+
+.stock .stockItem #stockImage {
+    position: relative;
+}
+
+.stock .stockItem #stockImage img {
+    width: 100%;
+
+}
+
+.part-2 .stockItem #stockImage img {
+    width: 100%;
+    height: 250px;
+
+}
+
+
+.stock .in-stock #stockImage #waterMark {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    background-color: #1a2456;
+    color: white;
+    padding: 5px 20px;
+}
+
+
+.stock .stockItem #stockTitle {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    color: #1a2456;
+    margin: 5px 0;
+}
+
+.stock .stockItem #stockTitle #shopNow {
+    background-color: #1a2456;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 20px;
+    position: absolute;
+    right: -2px;
+    opacity: 0;
+    font-size: 12px;
+
+}
+
+.part-2 .stockItem #stockTitle h1 {
+    font-size: 18px;
+}
+
+
+.stock .stockItem #stockDescription {
+
+    color: #1a2456;
+}
+
+.stock .stockItem:hover #stockTitle p {
+    opacity: 0;
+    transition: all 0.2s linear;
+}
+
+
+.stock .stockItem:hover #stockTitle #shopNow {
+    opacity: 1;
+    transition: all 0.2s linear;
+}
+
+.stock .stockItem #stockTitle:hover {
+    color: black;
+}
+
+/* stock END */
+
+/* create console */
+#createConsole {
+    margin-top: 20px;
+    background-color: #c4c4c4;
+    width: 100%;
+    height: fit-content;
+}
+
+#createConsole .container {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    text-align: center;
+    color: #1a2456;
+    height: 100%;
+
+
+}
+
+#createConsole .container h1 {
+    margin-top: 30px;
+    font-size: 40px;
+    word-spacing: 2px;
+
+
+}
+
+#createConsole .container p {
+    color: #2c3770;
+    font-size: 18px;
+
+
+}
+
+/* create console END */
+/* footer */
+#footer {
+    background-color: #1a2456;
+    height: 200px;
+    padding: 10px 0 50px 0;
+}
+
+#footer .container {
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+#footer .container>div {
+    margin: 20px 50px 0 -20px;
+    min-width: 160px;
+}
+
+
+#footer h1 {
+    font-size: 11px;
+    font-weight: 600;
+    color: #efc2b3;
+    margin-bottom: 15px;
+}
+
+#footer h6 {
+    color: #efc2b3;
+    font-size: 13px;
+    font-weight: 100;
+
+}
+
+#footer p {
+    font-size: 15px;
+    font-weight: 200;
+    color: #efc2b3;
+    margin-bottom: 2px;
+}
+
+#footer ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+#footer ul li a {
+    font-size: 14px;
+    text-decoration: none;
+    color: #efc2b3;
+}
+
+#footer ul li a:hover {
+    color: #ff8b68;
+    text-decoration: underline;
+}
+
+#footer #subscribe {
+    display: flex;
+    flex-direction: column;
+}
+
+#footer #subscribe input {
+    background-color: transparent;
+    border: 1px solid #efc2b3;
+    padding: 5px;
+    margin-top: 8px;
+    outline: none;
+    color: #efc2b3;
+}
+
+#footer #subscribe input::placeholder {
+    color: #efc2b3;
+}
+
+#footer #subscribe button {
+    background-color: #efc2b3;
+    color: #1a2456;
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: none;
+}
+
+#footer #subscribe #icons {
+    margin-top: 10px;
+}
+
+#footer #subscribe #icons i {
+    border-radius: 50%;
+    background-color: #efc2b3;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    color: #1a2456;
+    float: left;
+    margin-right: 10px;
+}
+
+#footer #subscribe #copyRight {
+    margin-top: 20px;
+}
+
+/* footer END */
