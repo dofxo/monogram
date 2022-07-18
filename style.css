@@ -51,7 +51,7 @@
     position: relative;
 }
 
-#navBar #navBarRight>ul>li>a,
+#navBar #navBarRight>ul>li>*,
 #navBar svg {
     cursor: pointer;
     font-size: 12px;
@@ -72,7 +72,7 @@
     position: relative;
 }
 
-#navBar #navBarRight>ul #dropDown>a:hover {
+#navBar #navBarRight>ul #dropDown>p:hover {
 
     color: #f0efed;
 }
@@ -81,7 +81,7 @@
     position: absolute;
     content: '';
     left: 90%;
-    top: 35%;
+    top: 20%;
     width: 4px;
     height: 4px;
     border-bottom: 2px solid #efc2b3;
