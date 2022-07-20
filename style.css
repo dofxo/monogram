@@ -78,12 +78,14 @@
 
     color: #f0efed;
 }
-
+#navBar #navBarRight >ul p {
+    display: inline;
+}
 #navBar #navBarRight>ul #dropDown::after {
     position: absolute;
     content: '';
     left: 90%;
-    top: 20%;
+    top: 40%;
     width: 4px;
     height: 4px;
     border-bottom: 2px solid #efc2b3;
