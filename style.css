@@ -144,29 +144,55 @@
     height: 650px;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
-#title .container {
-    display: flex;
-    justify-content: flex-end;
+#title #text-box {
+    margin: 0 0 0 50%;
 }
 
-#title #textBox {
-    margin: 70px 70px 0 0;
-}
-
-#title #textBox h1 {
+#title #text-box h1 {
     color: #1a2456;
     font-size: 40px;
     font-weight: bold;
 }
 
-#title #textBox p {
+#title #text-box p {
     color: #1a2456;
     font-size: 16px;
 
 }
 
+/* media queries for navBar & title */
+@media screen and (max-width:840px) {
+    #navBar * {
+        font-size: 10px !important;
+    }
+
+    #navBar #navBarRight>ul #dropDown::after {
+        top: 22%;
+        font-size: 10px !important;
+    }
+
+    #text-box {
+        margin: 0 0 0 40% !important;
+    }
+
+    #text-box>* {
+        font-size: 20px !important;
+
+    }
+
+}
+
+@media screen and (max-width:780px) {
+    #navBar #navBarRight>ul>li {
+        display: none !important;
+    }
+
+}
+
+/* media queries for navBar END */
 
 /* title END */
 /* stock / stock 2  */
