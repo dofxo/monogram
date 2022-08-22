@@ -35,3 +35,16 @@ hamburgerMenuIcon.addEventListener('click', () => {
 
 })
 // hamburger menu event listener END
+// scroll motion for navbar
+const navbarEl = document.getElementById('navBar')
+let currentScroll = 0
+window.addEventListener('scroll', () => {
+    currentScroll = window.scrollY
+    if (currentScroll > 0) {
+        navbarEl.classList.add('scroll-down')
+    }
+    else {
+        navbarEl.classList.remove('scroll-down')
+    }
+})
+// scroll motion for navbar END
